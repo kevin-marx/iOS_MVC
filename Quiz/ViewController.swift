@@ -9,27 +9,19 @@ class ViewController: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
-    //Quiz Model
-    let questions: [String] = [
-        "What is the captial of Colorado?",
-        "Who coined the term 'debugging'?",
-        "Below what temperature do mosquitos stop flying?"
-    ]
-    let answers: [String] = [
-        "Denver",
-        "Grace Hopper",
-        "50 degrees F"
-    ]
+    //Quiz Model moved to the Quiz class, create a new object reference here
+    let quizzy:Quiz = Quiz()
     var currentQuestionIndex: Int = 0
     
+    //TODO : Modify the functions below to use the quizzy object's properties and methods instead of the array values
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = questions[currentQuestionIndex]
+        questionLabel.text = questions[currentQuestionIndex] //The questions array has been moved to the quiz class, use the quizzy reference to access it
     }
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
         currentQuestionIndex += 1
-        if currentQuestionIndex == questions.count {
+        if currentQuestionIndex == questions.count { //The quiz class has a computed property for the number of questions
             currentQuestionIndex = 0
         }
         
@@ -39,7 +31,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
-        let answer: String = answers[currentQuestionIndex]
+        let answer: String = answers[currentQuestionIndex] //The answers array has been moved to the quiz class, use the quizzy reference to access it
         answerLabel.text = answer
     }
 

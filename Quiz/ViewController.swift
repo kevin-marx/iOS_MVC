@@ -13,12 +13,14 @@ class ViewController: UIViewController {
     let questions: [String] = [
         "What is the captial of Colorado?",
         "Who coined the term 'debugging'?",
-        "Below what temperature do mosquitos stop flying?"
+        "Below what temperature do mosquitos stop flying?",
+        "how r u"
     ]
     let answers: [String] = [
         "Denver",
         "Grace Hopper",
-        "50 degrees F"
+        "50 degrees F",
+        "ikd but i hope u r ok"
     ]
     var currentQuestionIndex: Int = 0
     

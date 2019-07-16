@@ -2,7 +2,7 @@
 //  Modified from iOS Programming, Big Nerd Ranch
 //
 
-class Quiz{
+struct Quiz{
  
 private let questions: [String] = [
     "What is the captial of Colorado?",

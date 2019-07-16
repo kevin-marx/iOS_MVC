@@ -21,9 +21,8 @@ class ViewController: UIViewController {
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
         currentQuestionIndex += 1
-        if currentQuestionIndex == quizzy.count { //The quiz class has a computed property for the number of questions
-            currentQuestionIndex = 0
-        }
+        // Go back to 0 if the index = count
+        currentQuestionIndex = currentQuestionIndex % quizzy.count
         
         let question: String = quizzy.question(number: currentQuestionIndex)
         questionLabel.text = question

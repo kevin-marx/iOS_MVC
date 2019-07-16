@@ -7,13 +7,15 @@ class Quiz{
 private let questions: [String] = [
     "What is the captial of Colorado?",
     "Who coined the term 'debugging'?",
-    "Below what temperature do mosquitos stop flying?"
+    "Below what temperature do mosquitos stop flying?",
+    "what's the best beverage?"
 ]
     
 private let answers: [String] = [
     "Denver",
     "Grace Hopper",
-    "50 degrees F"
+    "50 degrees F",
+    "water"
 ]
 
     var count : Int {
